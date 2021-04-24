@@ -1,0 +1,149 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  /*
+   * CSS image reference example.
+   */
+  background-image: url('./images/bg-pattern.png');
+
+  text-align: center;
+  width: 100vw;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.photo-card > .stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-list_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: calc(100% / 3 - 20px);
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+.photo-card .photo-card_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.stats-item {
+  display: flex;
+  align-content: center;
+  margin-right: 40px;
+}
+
+.stats :last-child {
+  margin-right: 0;
+}
+
+.modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  background-image: url('./images/bg-pattern.png');
+
+  transition: opasity, linear, 500ms;
+}
+
+.for-fullsize-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.modal > button {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+
+  width: 25px;
+  height: 25px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close-modal-svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.modal.is-open {
+  opacity: 1;
+  pointer-events: all;
+  position: fixed;
+}
+
+.modal-image_fullsize {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.loadMore-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+
+  border-radius: 4;
+  background-color: white;
+}
+
+.search-form > input {
+  width: 400px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.stats-item .material-icons {
+  margin-right: 5px;
+}
