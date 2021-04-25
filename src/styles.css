@@ -147,3 +147,9 @@ ul {
 .stats-item .material-icons {
   margin-right: 5px;
 }
+
+.error-img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}

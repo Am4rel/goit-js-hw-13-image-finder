@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Am4rel/goit-js-hw-13-image-finder"
+    "url": "git+https://github.com/am4rel/goit-js-hw-13-image-finder"
   },
   "keywords": [],
-  "author": "Oleg Shevchenko <ama.freelnc@gmail.com>",
+  "author": "oleg Shevchenko <ama.freelnc@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Am4rel/goit-js-hw-13-image-finder"
+    "url": "https://am4rel.github.io/goit-js-hw-13-image-finder/"
   },
-  "homepage": "https://am4rel.github.io/goit-js-hw-13-image-finder",
+  "homepage": "https://am4rel.github.io/goit-js-hw-13-image-finder/",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",

@@ -41,10 +41,12 @@ async function onInput(event) {
     if (markup === "") {
         sendErrorMessage("I can't find anything.", "Maybe you missspelled something, try again.");
         return
+    } else if (!markup.includes("technical error")) {
+        refs.loadMore.removeAttribute("hidden")
     }
 
     refs.gallery.innerHTML = markup;
-    refs.loadMore.removeAttribute("hidden")
+    
 }
 
 async function onLoadMore(event) {
@@ -72,6 +74,10 @@ async function onLoadMore(event) {
 
 async function makeImageListMarkup (searchQuery, page, API_KEY) {
     const response = await getImages(searchQuery, page, API_KEY);
+    if (response === "error") {
+        sendErrorMessage("Service error", "Sorry, I can't send you any image now, try gain later, please.")
+        return '<img src="https://i.pinimg.com/originals/96/f2/bb/96f2bb94fcc9d64ca1fba04a1cf45a5e.png" alt="technical error" class="error-img"/>'
+    }
     const images = response.hits;
     const markup = makeImageListTpl(images);
     return markup;
